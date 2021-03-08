@@ -1,0 +1,42 @@
+\documentclass[a4paper,fontsize=11pt,oneside,parskip=half,headings=normal]{scrreprt} 
+\usepackage[utf8]{inputenc}
+\input{template/_dhbw_praeambel}
+% Typ der Arbeit
+\newcommand{\typMeinerArbeit}{Bachelorarbeit}
+% Thema der Arbeit
+\newcommand{\themaMeinerArbeit}{Title}
+% Ggf. Untertitel der Arbeit 
+\newcommand{\unterThemaMeinerArbeit}{}
+% Vorname, Name der Autorin/des Autors (für Titelseite und Metadaten)
+\newcommand{\meinName}{Jon Doe}
+\newcommand{\course}{WWI 20xx}
+\newcommand{\faculty}{Wirtschaft}
+\newcommand{\specialisation}{Wirtschaftsinformatik}
+\newcommand{\duedate}{01.01.2000}
+\bibliography{bib.bib}
+\begin{document}
+
+
+\include{deckblatt}
+\pagenumbering{Roman} 
+\begin{spacing}{1}
+
+        %%% Inhaltsverzeichnis %%%
+        \tableofcontents
+        \clearpage
+        \input{abkuerzungen.tex}
+        \clearpage
+    %%% Abbildungsverzeichnis %%%
+        \listoffigures
+        \phantomsection
+        \addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+        \clearpage
+        
+    \end{spacing}
+\newpage
+\pagenumbering{arabic}
+\include{chapters/introduction}
+\include{chapters/theory}
+\include{chapters/conclusion}
+\literaturverzeichnis
+\end{document}
