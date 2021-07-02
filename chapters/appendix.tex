@@ -1,0 +1,21 @@
+\chapter*{Appendix}
+\addcontentsline{toc}{chapter}{Appendix}
+
+\lstset{language=TeX,
+    morekeywords={Appendix, anhangteil}
+}
+
+% Definition des Anhangverzeichnis
+\section*{Appendix Directory}
+\vspace{-8em}
+\abstaendeanhangverzeichnis
+\listofanhang
+\clearpage
+
+% Konfiguration der speziellen Kopfzeile für den Anhang
+\spezialkopfzeile{Appendix}
+
+% Hauptteil des Anhangs
+% Mit \anhang{Abschnitt des Anhangs} fügt man ein Kapitel in dem Anhang hinzu z. B. Interview Transkript
+\anhang{Erster Anhang}
+\blindtext
